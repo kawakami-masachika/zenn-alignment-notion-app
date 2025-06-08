@@ -23,7 +23,8 @@ class NotionBaseService
       "URL": { url: "https://zenn.dev#{article['path']}" },
       "投稿日": { date: { start: Date.iso8601(article["published_at"]).strftime('%Y-%m-%d') } },
       "いいね数": { number: article["liked_count"] },
-      "トピック": { multi_select: (article["topics"] || []).map { |t| { name: t["name"] } } }
+      "トピック": { multi_select: (article["topics"] || []).map { |t| { name: t["name"] } } },
+      "追加日": { date: { start: Date.today.strftime('%Y/%m/%d') } }
     }
 
     body = {
