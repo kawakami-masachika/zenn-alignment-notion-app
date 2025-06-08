@@ -1,0 +1,1 @@
+# zenn-alignment-notion-app
