@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    base64 (0.3.0)
     csv (3.3.5)
     dotenv (2.8.1)
     ethon (0.16.0)
@@ -31,6 +32,8 @@ GEM
     faraday_middleware (1.2.1)
       faraday (~> 1.0)
     ffi (1.17.2-arm64-darwin)
+    gli (2.22.2)
+      ostruct
     hashie (4.1.0)
     httparty (0.23.1)
       csv
@@ -46,19 +49,32 @@ GEM
       hashie (~> 4.0)
       multi_json (~> 1.3)
       typhoeus (~> 1.0)
+    ostruct (0.6.1)
     rake (13.2.1)
     ruby2_keywords (0.0.5)
+    slack-ruby-client (1.0.0)
+      faraday (>= 1.0)
+      faraday_middleware
+      gli
+      hashie
+      websocket-driver
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
+    websocket-driver (0.8.0)
+      base64
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.5)
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-24
 
 DEPENDENCIES
   dotenv
   httparty
   notion_ruby
   rake
+  slack-ruby-client
 
 BUNDLED WITH
    2.4.8
